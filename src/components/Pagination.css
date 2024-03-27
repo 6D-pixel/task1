@@ -1,0 +1,19 @@
+.pagination {
+    display: flex;
+    list-style: none;
+    padding: 0;
+}
+
+.page-item {
+    margin-right: 10px;
+}
+
+.page-item a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.page-item a.active {
+    color: #007bff;
+}

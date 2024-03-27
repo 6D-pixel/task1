@@ -1,0 +1,45 @@
+/* src/components/Modal.css */
+
+.modal-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .modal {
+    background-color: rgb(226, 219, 219); /* Semi-transparent background */
+    position: relative;
+    width: 60%; /* Adjust as needed */
+    max-width: 600px; /* Set maximum width */
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  .modal-content {
+    background-color: #fefefe;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Add box shadow for depth */
+  }
+  
+  .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #aaa;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+  }
+  
