@@ -9,14 +9,14 @@ const PopUp = ({ country, closeModal }) => {
   useEffect(() => {
     const fetchWeatherInfo = async () => {
       try {
-        const response_key = await axios.get(`http://dataservice.accuweather.com/locations/v1/cities/geoposition/search`, {
+        const response_key = await axios.get(`https://dataservice.accuweather.com/locations/v1/cities/geoposition/search`, {
           params: {
             apikey:`${import.meta.env.VITE_API_KEY}`,//api key
             q:`${lat},${lng}`
           }
         });
         const weatherKey = response_key.data.Key;
-        const response_weather = await axios.get(`http://dataservice.accuweather.com/currentconditions/v1/${weatherKey}`,{
+        const response_weather = await axios.get(`https://dataservice.accuweather.com/currentconditions/v1/${weatherKey}`,{
             params:{
                 apikey:`${import.meta.env.VITE_API_KEY}`
             }
