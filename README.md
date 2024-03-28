@@ -1,6 +1,9 @@
 # React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+To Build project locally.
 
 - npm install
 - npm run dev
+
+Backend for weather api
+ - code for accuweather here https://github.com/6D-pixel/task1_express
