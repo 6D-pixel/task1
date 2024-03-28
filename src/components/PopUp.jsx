@@ -5,30 +5,20 @@ const PopUp = ({ country, closeModal }) => {
   const [weatherInfo, setWeatherInfo] = useState(null);
   const lat = country.capitalInfo.latlng[0];
   const lng = country.capitalInfo.latlng[1];
-
+  console.log(lat, lng);
   useEffect(() => {
     const fetchWeatherInfo = async () => {
       try {
-        const response_key = await axios.get(
-          `https://dataservice.accuweather.com/locations/v1/cities/geoposition/search`,
+        const response = await axios.get(
+          `https://task1-express.onrender.com/weather`,
           {
             params: {
-              apikey: import.meta.env.VITE_API_KEY, //api key
               q: `${lat},${lng}`,
             },
           }
         );
-        const weatherKey = response_key.data.Key;
-        const response_weather = await axios.get(
-          `https://dataservice.accuweather.com/currentconditions/v1/${weatherKey}`,
-          {
-            params: {
-              apikey: import.meta.env.VITE_API_KEY,
-            },
-          }
-        );
-        setWeatherInfo(response_weather.data);
-        console.log(response_weather.data);
+        setWeatherInfo(response.data);
+        console.log(response.data);
       } catch (error) {
         console.error("Error fetching weather info:", error);
       }
