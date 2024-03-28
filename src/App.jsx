@@ -1,4 +1,3 @@
-import { useState } from "react";
 import "./App.css";
 import { FlagList } from "./components/FlagList";
 

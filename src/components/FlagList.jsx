@@ -72,8 +72,6 @@ export const FlagList = () => {
               width={200}
               onClick={() => openModal(flag)}
             />
-            {/* Implement your popup functionality here */}
-            {/* Make API call to AccuWeather for flag's weather information */}
           </div>
         ))}
         <Pagination
